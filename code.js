@@ -11,8 +11,11 @@ async function weatherCheck(city) {
     if (response.status == 404) {
         document.querySelector('.error').style.display = 'block';
         document.querySelector('.weather').style.display = 'none';
+        document.querySelector('.')
     }
     else {
+        document.querySelector('.error').style.display = 'none';
+
         document.querySelector('.city').innerHTML = data.name;
         document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + '°C';
         document.querySelector('.humidity').innerHTML = data.main.humidity + '%';
